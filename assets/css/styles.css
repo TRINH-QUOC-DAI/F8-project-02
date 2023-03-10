@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #ffb900;
+    --font-sen: "Sen", sans-serif;
+}
+
 html,
 body {
     scroll-behavior: smooth;
@@ -58,6 +63,7 @@ a {
 /* ==========HEADER */
 .header {
     position: sticky;
+    z-index: 10;
     top: -26px;
     padding-top: 26px;
     background: #fffcf4;
@@ -122,22 +128,22 @@ nav li.active a:after {
 
 /* ==========hero */
 .hero {
-    height: 100vh;
+    padding-bottom: 64px;
     padding-top: 54px;
     background: #fffcf4;
 }
 
 .hero .body {
     display: flex;
-    justify-content: space-around;
 }
 
 .hero .media-block {
     position: relative;
-    width: 570px;
+    padding-right: 100px;
 }
 
 .hero .media-block .media-img {
+    display: block;
     min-width: 470px;
     width: 470px;
     min-height: 685px;
@@ -156,20 +162,64 @@ nav li.active a:after {
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     width: 270px;
-    height: 244px;
-    background: #ccc;
+    background: #fff;
+    padding: 24px;
 }
 
+.card > div {
+    display: flex;
+    align-items: center;
+}
+
+.card > div:not(:first-child) {
+    margin-top: 14px;
+}
+
+.card div .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff9e8;
+}
+
+.card div:nth-child(2) .icon {
+    background: #fcefff;
+}
+
+.card div:nth-child(3) .icon {
+    background: #ebeaff;
+}
+
+.card .icon + div {
+    margin-left: 16px;
+}
+
+.card div .desc-card {
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+
+.card div .popular-card {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+/* ============ hero content   */
 .hero .content-block {
     margin-left: 130px;
-    width: 470px;
+    width: 52%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .hero .content-block .title {
-    font-family: "Sen", sans-serif;
+    font-family: var(--font-sen);
     font-weight: 700;
     font-size: 5.8rem;
     line-height: 1.17;
@@ -190,7 +240,7 @@ nav li.active a:after {
 .content-block .see-more .see-courses {
     height: 64px;
     width: 180px;
-    background: #ffb900;
+    background: var(--primary-color);
     border-radius: 32px;
     color: #ffffff;
 }
@@ -203,12 +253,15 @@ nav li.active a:after {
 
 .content-block .see-more .watch-video {
     margin-left: 28px;
+    border: none;
+    background-color: #fffcf4;
+    cursor: pointer;
 }
 
 .see-more .watch-video div {
-    display: inline-block;
-    text-align: center;
-    line-height: 2.5;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
     width: 40px;
@@ -227,26 +280,20 @@ nav li.active a:after {
 
 .content-block .data {
     display: flex;
+    align-items: flex-end;
     margin-top: 8px;
+    line-height: 2.1;
 }
 
-.data div {
-    display: flex;
-}
-
-.data div:last-child {
-    margin-left: 28px;
-}
-
-.data div .quant {
-    font-family: "Sen", sans-serif;
+.data strong {
+    font-family: var(--font-sen);
     font-weight: 700;
     font-size: 4.4rem;
     line-height: 1.23;
     color: #171100;
+    margin-right: 8px;
 }
 
-.hero .data div .name_data {
-    margin-left: 10px;
-    line-height: 3.9;
+.data strong + strong {
+    margin-left: 28px;
 }
