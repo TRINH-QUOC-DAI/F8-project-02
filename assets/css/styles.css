@@ -49,6 +49,8 @@ a {
     border-radius: 24.5px;
     background: #171100;
     cursor: pointer;
+    border: none;
+    font-weight: 600;
 }
 
 .line-clamp {
@@ -65,7 +67,7 @@ a {
 }
 
 .heading {
-    font-family: var(--font-sent);
+    font-family: var(--font-sen);
     font-weight: 700;
     font-size: 3.8rem;
     line-height: 1.26;
@@ -528,4 +530,80 @@ nav li.active a:after {
     font-size: 2.6rem;
     line-height: 1.54;
     color: #ffffff;
+}
+
+/* ========features */
+.features {
+    margin-top: 135px;
+    /* background: #ccc; */
+    padding: 65px 0;
+}
+
+.features .body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features .images {
+    display: flex;
+    gap: 30px;
+}
+
+.features .images .image-1 {
+    margin-top: 34px;
+}
+
+.features .images .image {
+    width: 270px;
+    height: 404px;
+    min-height: 404px;
+    object-fit: cover;
+    border-radius: 16px;
+    background-color: #ccc;
+}
+
+.features .infor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 470px;
+}
+
+.features .infor .desc {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #5f5b53;
+}
+
+.features .infor .btn-features {
+    margin-top: 32px;
+    width: 137px;
+    background: #ffb900;
+    border-radius: 26px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #ffffff;
+}
+
+.features-2 {
+    margin-top: 70px;
+}
+
+.features-2 .body {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.features-2 .infor {
+    width: 49%;
+}
+
+.features-2 .images {
+    margin-left: 130px;
+}
+
+.features-2 .images .image {
+    width: 470px;
+    height: 440px;
 }
